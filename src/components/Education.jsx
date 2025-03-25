@@ -1,5 +1,5 @@
-import Lottie from "lottie-react";
-import education from "../assets/lottie/education.json";
+import Educations from "../assets/education.png";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -12,7 +12,8 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="EXPERIENCE p-5 mx-20 mb-10 min-h-screen font-['Poppins']  max-sm:p-2 max-sm:mx-5"
+      className="EXPERIENCE p-5 mx-20 mb-10 min-h-screen font-['Poppins']  max-sm:p-2 max-sm:mx-5 
+      "
     >
       <div className="WRAPPER mt-10">
         <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-5 max-sm:text-4xl   ">
@@ -23,8 +24,11 @@ const Education = () => {
           className="EDUCATION flex gap-7 justify-between flex-row-reverse max-sm:flex-col"
           data-aos="fade-right"
         >
-          <div className="max-w-[520px] mt-[52px] p-7 max-sm:p-3">
-            <div className="flex gap-5">
+          <div
+            className="max-w-[520px] mt-[52px] p-7 max-sm:p-3 transition-all duration-300
+          hover:bg-gradient-to-tl from-[#e1e1e1] to-[#fff] dark:from-[#00040F] dark:to-[#0B274C]"
+          >
+            <div className="flex gap-5 ">
               <img src={BIET} alt="BIET JHANSI" className="w-[90px] h-[90px]" />
               <h1 className="bg-clip-text text-transparent bg-gradient-to-r max-sm:text-[17px] from-amber-500 via-orange-600 to-yellow-500 dark:from-[#ff6600] dark:to-slate-100 font-semibold text-2xl w-[300px] h-[100px] tracking-wider ">
                 Bundelkhand Institute of Engineering and Technology, Jhansi
@@ -44,9 +48,9 @@ const Education = () => {
               </p>
             </div>
           </div>
-          <Lottie
-            animationData={education}
-            loop={true}
+          <img
+            src={Educations}
+            alt="education"
             className="max-w-[500px] shadow-xl rounded-xl border border-[#00040f]"
           />
         </div>

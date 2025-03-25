@@ -1,4 +1,4 @@
-import Project_prop from "@/components/Project_prop";
+import Project_prop from "./Project_prop";
 import {
   GPT4,
   Portfolio,

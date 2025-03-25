@@ -1,5 +1,4 @@
-import Lottie from "lottie-react";
-import computer from "../assets/lottie/computer.json";
+import Vivek from "../assets/Vivek.png";
 
 const About = () => {
   return (
@@ -8,7 +7,7 @@ const About = () => {
         id="about"
         className="p-5 mx-20 mb-10 font-medium font-['Poppins']  max-sm:p-2 max-sm:mx-5"
       >
-        <div className="WRAPPER mt-12 flex max-sm:flex-col gap-5">
+        <div className="WRAPPER mt-12 flex justify-center items-center p-5 max-sm:flex-col gap-5">
           <div className="INTRO text-[70px] leading-[80px] font-semibold max-sm:text-[50px] max-sm:leading-[70px] max-sm:font-semibold">
             <h3 className="text-[#00040f] dark:text-white">
               Hi, there! <br />I am
@@ -25,10 +24,10 @@ const About = () => {
             </p>
           </div>
 
-          <Lottie
-            animationData={computer}
-            loop={true}
-            className="max-w-[650px] shadow-xl rounded-xl border border-[#00040f]"
+          <img
+            src={Vivek}
+            alt="Vivek"
+            className="w-[500px] h-[500px] rounded-full ml-20"
           />
         </div>
       </section>
