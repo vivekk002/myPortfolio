@@ -8,13 +8,19 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    extensions: [".js", ".jsx", ".json"],
+    preserveSymlinks: true,
   },
   build: {
-    sourcemap: true,
+    sourcemap: "inline",
     rollupOptions: {
       output: {
         sourcemapExcludeSources: false,
+        manualChunks: undefined,
       },
     },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom"],
   },
 });
