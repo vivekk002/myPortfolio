@@ -52,7 +52,7 @@ const Contact = () => {
                 <SiTwitter />
               </a>
               <a
-                href="vivekkumar.akvk@gmail.com"
+                href="mailto:vivekkumar.akvk@gmail.com"
                 className=" hover:text-slate-500  dark:hover:text-sky-300"
               >
                 <SiGmail />
