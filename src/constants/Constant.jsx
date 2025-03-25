@@ -1,3 +1,4 @@
+import Airbnb from "../assets/Airbnb.png";
 import BIET from "../assets/biet.png";
 import C from "../assets/C.png";
 import CPP from "../assets/CPP.png";
@@ -20,11 +21,10 @@ import Portfolio from "../assets/portfolio.jpg";
 import Projects from "../assets/projects.png";
 import Python from "../assets/Python.png";
 import react from "../assets/React.png";
-import Rocket from "../assets/Rocket.jpg";
+import Employee from "../assets/Employee.png";
 import Game from "../assets/Stone.jpg";
 import TailwindCSS from "../assets/TailwindCSS.png";
 import Vite from "../assets/Vite.png";
-import WellBeing from "../assets/well-being.jpg";
 
 export {
   C,
@@ -41,9 +41,9 @@ export {
   Hackthechain,
   GPT4,
   Portfolio,
-  Rocket,
-  WellBeing,
+  Employee,
   Game,
+  Airbnb,
   GDSC,
   KDE,
   BIET,

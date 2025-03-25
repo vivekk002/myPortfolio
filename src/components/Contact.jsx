@@ -22,36 +22,37 @@ const Contact = () => {
               Vivek Kumar
             </h2>
             <p className="text-gray-600 dark:text-slate-400 leading-[30.8px] mt-7 max-w-[400px] max-sm:text-center">
-              Google DSC Web Dev Lead | GSSoC'23 | Technical Team Lead -
-              IIITians Network | IIIT Kota'26
+              Passionate Full-Stack Developer with expertise in the MERN stack,
+              building scalable web applications. Driven by a love for
+              technology and problem-solving. 🚀
             </p>
             <div className="SOCIALS text-[#00040f] dark:text-white text-2xl flex gap-7 mt-5 max-sm:justify-evenly">
               <a
-                href="https://github.com/DhairyaMajmudar"
+                href="https://github.com/vivekk002"
                 className=" hover:text-slate-500  dark:hover:text-sky-300"
               >
                 <SiGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/dhairya-majmudar/"
+                href="https://www.linkedin.com/in/vivek1107"
                 className=" hover:text-slate-500  dark:hover:text-sky-300"
               >
                 <SiLinkedin />
               </a>
               <a
-                href="https://www.instagram.com/dhairya_majmudar_1511/"
+                href="https://www.instagram.com/vivekrajput_1025/"
                 className=" hover:text-slate-500  dark:hover:text-sky-300"
               >
                 <SiInstagram />
               </a>
               <a
-                href="https://twitter.com/majmudar777"
+                href="https://twitter.com/silent_saffer"
                 className=" hover:text-slate-500  dark:hover:text-sky-300"
               >
                 <SiTwitter />
               </a>
               <a
-                href="majmudar777@gmail.com"
+                href="vivekkumar.akvk@gmail.com"
                 className=" hover:text-slate-500  dark:hover:text-sky-300"
               >
                 <SiGmail />
@@ -59,11 +60,13 @@ const Contact = () => {
             </div>
             <div className="flex gap-5 max-sm:justify-center">
               <button className="py-3 px-4 bg-gradient-to-t dark:from-cyan-500 dark:to-slate-300  from-blue-600 to-cyan-600 font-medium text-[12px] text-[#e1e1e1] dark:text-black outline-none mt-10 mr-3 rounded ">
-                <a href="">Resume</a>
+                <a href="https://drive.google.com/file/d/1AzsnWgReXI9s-SPmXock1U48Pdk4Sb2r/view?usp=drive_link">
+                  Resume
+                </a>
               </button>
               <button className="py-3 px-4 bg-gradient-to-t dark:from-cyan-500 dark:to-slate-300 from-blue-600 to-cyan-600  font-medium text-[12px] text-[#e1e1e1] dark:text-black outline-none mt-10 mr-3 rounded ">
                 <a
-                  href="https://github.com/DhairyaMajmudar/Personal-Portfolio"
+                  href="https://github.com/vivekk002/myPortfolio.git"
                   className="flex gap-2 items-center justify-center"
                 >
                   <SiGithub />
@@ -83,7 +86,7 @@ const Contact = () => {
         </div>
 
         <p className="text-[#00040f] dark:text-slate-300 mx-2 text-center capitalize tracking-widest max-sm:text-sm p-2">
-          made with 💙 by Dhairya Majmudar & the Open Source Community
+          made with 💙 by Vivek Kumar & the Open Source Community
         </p>
       </section>
     </>
