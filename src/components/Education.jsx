@@ -1,9 +1,7 @@
-import Educations from "../assets/education.png";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { BIET } from "../constants/Constant";
+import { BIET, Educations } from "../constants/Constant";
 
 const Education = () => {
   useEffect(() => {

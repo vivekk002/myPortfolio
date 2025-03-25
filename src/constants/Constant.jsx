@@ -26,6 +26,7 @@ import ExpressJs from "../assets/expressjs.png";
 import NodeJs from "../assets/nodejs.png";
 import MongoDB from "../assets/mongodb.png";
 import Projects from "../assets/projects.png";
+import Educations from "../assets/education.png";
 
 export {
   C,
@@ -53,4 +54,5 @@ export {
   NodeJs,
   MongoDB,
   Projects,
+  Educations,
 };
