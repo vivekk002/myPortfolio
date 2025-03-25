@@ -10,7 +10,9 @@ import {
   Javascript,
   CPP,
   C,
-  Vue
+  ExpressJs,
+  NodeJs,
+  MongoDB,
 } from "../constants/Constant";
 
 import AOS from "aos";
@@ -29,21 +31,27 @@ const Skills = () => {
           SKILLS
         </h1>
         <div
-          className="IMG grid place-content-center p-5 grid-cols-3 gap-4 max-sm:p-2 mt-10"
+          className=" grid grid-cols p-15 text-center"
           data-aos="zoom-out-up"
         >
-          <Image img={HTML}></Image>
-          <Image img={CSS}></Image>
-          <Image img={Javascript}></Image>
-          <Image img={react}></Image>
-          <Image img={TailwindCSS}></Image>
-          <Image img={Vue}></Image>
-          <Image img={CPP}></Image>
-          <Image img={C}></Image>
-          <Image img={Python}></Image>
-          <Image img={Vite}></Image>
-          <Image img={Git}></Image>
-          <Image img={Github}></Image>
+          <div className="grid grid-cols-7 mt-10  ">
+            <Image img={HTML} label="HTML"></Image>
+            <Image img={CSS} label="CSS"></Image>
+            <Image img={Javascript} label="JavaScript"></Image>
+            <Image img={react} label="React"></Image>
+            <Image img={TailwindCSS} label="TailwindCSS"></Image>
+            <Image img={ExpressJs} label="Express.js"></Image>
+            <Image img={NodeJs} label="Node.js"></Image>
+          </div>
+          <div className="grid grid-cols-7 mt-10">
+            <Image img={CPP} label="C++"></Image>
+            <Image img={C} label="C"></Image>
+            <Image img={Python} label="Python"></Image>
+            <Image img={Vite} label="Vite"></Image>
+            <Image img={Git} label="Git"></Image>
+            <Image img={Github} label="Github"></Image>
+            <Image img={MongoDB} label="MongoDB"></Image>
+          </div>
         </div>
       </section>
     </>

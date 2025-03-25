@@ -9,22 +9,23 @@ import Git from "../assets/Git.png";
 import Vite from "../assets/Vite.png";
 import TailwindCSS from "../assets/TailwindCSS.png";
 import react from "../assets/react.png";
-import Vue from "../assets/vue.png";
 
 import Hackthechain from "../assets/HackTheChainLogo.png";
 import GSSOC from "../assets/GSSoc.jpg";
-import IITB from "../assets/IITB.png";
-import Sports from "../assets/Sports_Club.png";
-import IIITians from "../assets/IIITians_Network.png";
+
 import GDSC from "../assets/GDSC.png";
 import KDE from "../assets/kde.png";
-import Oppia from "../assets/oppia.png";
 
 import GPT4 from "../assets/gpt4.jpg";
 import Portfolio from "../assets/portfolio.jpg";
 import Rocket from "../assets/Rocket.jpg";
 import Game from "../assets/Stone.jpg";
 import WellBeing from "../assets/well-being.jpg";
+import BIET from "../assets/biet.png";
+import ExpressJs from "../assets/expressjs.png";
+import NodeJs from "../assets/nodejs.png";
+import MongoDB from "../assets/mongodb.png";
+import Projects from "../assets/projects.png";
 
 export {
   C,
@@ -38,12 +39,8 @@ export {
   react,
   Python,
   Javascript,
-  Vue,
   Hackthechain,
   GSSOC,
-  IITB,
-  Sports,
-  IIITians,
   GPT4,
   Portfolio,
   Rocket,
@@ -51,5 +48,9 @@ export {
   Game,
   GDSC,
   KDE,
-  Oppia,
+  BIET,
+  ExpressJs,
+  NodeJs,
+  MongoDB,
+  Projects,
 };

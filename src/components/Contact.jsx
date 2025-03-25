@@ -7,7 +7,7 @@ import {
   SiGmail,
 } from "react-icons/si";
 
-import Dhairya from "../assets/DhairyaNew.png";
+import Vivek from "../assets/Vivek.png";
 
 const Contact = () => {
   return (
@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="bg-gradient-to-tl from-[#e1e1e1] to-[#fff] dark:from-[#111827] dark:to-[#111827] dark:shadow-none rounded-2xl shadow-xl WRAPPER mx-2 flex justify-between p-7 mb-7 max-sm:flex-col-reverse max-sm:p-2">
           <div className="ABOUT p-7">
             <h2 className="text-[#00040f] font-semibold dark:text-slate-300 leading-7 text-xl tracking-wider max-sm:text-center">
-              Dhairya Majmudar
+              Vivek Kumar
             </h2>
             <p className="text-gray-600 dark:text-slate-400 leading-[30.8px] mt-7 max-w-[400px] max-sm:text-center">
               Google DSC Web Dev Lead | GSSoC'23 | Technical Team Lead -
@@ -75,8 +75,8 @@ const Contact = () => {
 
           <div className="IMG p-0 max-sm:grid max-sm:place-content-center">
             <img
-              src={Dhairya}
-              alt="Dhairya Majmudar"
+              src={Vivek}
+              alt="Vivek Kumar"
               className="h-[200px] max-sm:h-[150px] border-[#00040fab] dark:border-slate-300 border-4 rounded-full mt-12"
             />
           </div>

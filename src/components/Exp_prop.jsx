@@ -19,7 +19,7 @@ const Exp_prop = (props) => {
             </p>
           </div>
         </div>
-        <p className="text-sm text-slate-700 dark:text-slate-300 mt-5 p-2 leading-10">
+        <p className="text-sm text-slate-700 dark:text-slate-300 mt-5 p-1 leading-5">
           {props.para}
         </p>
       </div>

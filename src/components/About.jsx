@@ -14,13 +14,14 @@ const About = () => {
               Hi, there! <br />I am
             </h3>
             <span className="bg-clip-text text-transparent bg-gradient-to-r  from-blue-600 to-cyan-600 dark:from-cyan-500 dark:to-slate-200">
-              Dhairya Majmudar
-              
+              Vivek Kumar
             </span>
 
-            <p className="ABOUT h-[100px] text-xl max-sm:text-[15px] bg-clip-text text-transparent  bg-gradient-to-r  from-[#00040f] to-slate-500 dark:from-slate-500 dark:to-slate-200 max-w-[470px] mt-5 pl-1">
-              Programming enthusiast who often thinks about developing new 
-              things for solving real world problems.
+            <p className="ABOUT h-[150px] text-xl max-sm:text-[15px] bg-clip-text text-transparent  bg-gradient-to-r  from-[#00040f] to-slate-500 dark:from-slate-500 dark:to-slate-200 max-w-[470px] mt-5 pl-1">
+              Full-stack web developer skilled in the MERN stack, building
+              scalable and user-centric applications. Experienced in React,
+              Node.js, MongoDB, and Tailwind CSS, with a focus on clean code and
+              responsive design.
             </p>
           </div>
 
