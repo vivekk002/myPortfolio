@@ -10,6 +10,11 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: false, // Disable sourcemaps in production
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        sourcemapExcludeSources: false,
+      },
+    },
   },
 });
