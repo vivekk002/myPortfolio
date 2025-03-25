@@ -8,7 +8,6 @@ import GDSC from "../assets/GDSC.png";
 import Git from "../assets/Git.png";
 import Github from "../assets/Github.png";
 import GPT4 from "../assets/gpt4.jpg";
-import GSSOC from "../assets/GSSOC.png";
 
 import Hackthechain from "../assets/HackTheChainLogo.png";
 
@@ -40,7 +39,6 @@ export {
   Python,
   Javascript,
   Hackthechain,
-  GSSOC,
   GPT4,
   Portfolio,
   Rocket,
