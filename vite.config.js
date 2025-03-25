@@ -12,13 +12,7 @@ export default defineConfig({
     preserveSymlinks: true,
   },
   build: {
-    sourcemap: "inline",
-    rollupOptions: {
-      output: {
-        sourcemapExcludeSources: false,
-        manualChunks: undefined,
-      },
-    },
+    sourcemap: false,
   },
   optimizeDeps: {
     include: ["react", "react-dom"],
