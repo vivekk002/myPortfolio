@@ -49,7 +49,7 @@ const Education = () => {
           <img
             src={Educations}
             alt="education"
-            className="max-w-[500px] shadow-xl rounded-xl border border-[#00040f]"
+            className="max-w-[500px] shadow-xl rounded-xl border border-[#00040f] max-sm:hidden"
           />
         </div>
       </div>

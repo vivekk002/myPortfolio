@@ -16,7 +16,7 @@ const About = () => {
               Vivek Kumar
             </span>
 
-            <p className="ABOUT h-[150px] text-xl max-sm:text-[15px] bg-clip-text text-transparent  bg-gradient-to-r  from-[#00040f] to-slate-500 dark:from-slate-500 dark:to-slate-200 max-w-[470px] mt-5 pl-1">
+            <p className="ABOUT h-auto text-xl max-sm:text-[15px] bg-clip-text text-transparent  bg-gradient-to-r  from-[#00040f] to-slate-500 dark:from-slate-500 dark:to-slate-200 max-w-[470px] mt-5 pl-1">
               Full-stack web developer skilled in the MERN stack, building
               scalable and user-centric applications. Experienced in React,
               Node.js, MongoDB, and Tailwind CSS, with a focus on clean code and
@@ -27,7 +27,7 @@ const About = () => {
           <img
             src={Vivek}
             alt="Vivek"
-            className="w-[500px] h-[500px] rounded-full ml-20"
+            className="rounded-full  max-sm:hidden"
           />
         </div>
       </section>

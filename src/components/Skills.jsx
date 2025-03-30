@@ -31,10 +31,10 @@ const Skills = () => {
           SKILLS
         </h1>
         <div
-          className=" grid grid-cols p-15 text-center"
+          className=" grid grid-cols p-15 text-center "
           data-aos="zoom-out-up"
         >
-          <div className="grid grid-cols-7 mt-10  ">
+          <div className="grid grid-cols-7 mt-10 max-sm:grid-cols-3  max-sm:gap-5">
             <Image img={HTML} label="HTML"></Image>
             <Image img={CSS} label="CSS"></Image>
             <Image img={Javascript} label="JavaScript"></Image>
@@ -43,7 +43,7 @@ const Skills = () => {
             <Image img={ExpressJs} label="Express.js"></Image>
             <Image img={NodeJs} label="Node.js"></Image>
           </div>
-          <div className="grid grid-cols-7 mt-10">
+          <div className="grid grid-cols-7 mt-10 max-sm:grid-cols-3  max-sm:gap-5">
             <Image img={CPP} label="C++"></Image>
             <Image img={C} label="C"></Image>
             <Image img={Python} label="Python"></Image>
