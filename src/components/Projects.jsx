@@ -27,7 +27,7 @@ const Projects = () => {
       className="EXPERIENCE p-5 mx-20 min-h-screen font-['Poppins']  max-sm:p-2 max-sm:mx-5"
     >
       <div className="WRAPPER mt-10" data-aos="fade-down">
-        <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-5  max-sm:text-4xl  ">
+        <h1 className="text-primary-dark dark:text-white text-center font-extrabold text-5xl mb-5  max-sm:text-4xl  ">
           Projects
         </h1>
 
@@ -44,21 +44,21 @@ const Projects = () => {
             react={
               <Tooltip title="React" arrow>
                 <IconButton>
-                  <SiReact className="dark:text-slate-200 text-black" />
+                  <SiReact className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             tailwindcss={
               <Tooltip title="TailWind CSS" arrow>
                 <IconButton>
-                  <SiTailwindcss className="dark:text-slate-200 text-black" />
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             vite={
               <Tooltip title="Vite" arrow>
                 <IconButton>
-                  <SiVite className="dark:text-slate-200 text-black" />
+                  <SiVite className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
@@ -72,21 +72,21 @@ const Projects = () => {
             html5={
               <Tooltip title="React" arrow>
                 <IconButton>
-                  <SiReact className="dark:text-slate-200 text-black" />
+                  <SiReact className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             javascript={
               <Tooltip title="JavaScript" arrow>
                 <IconButton>
-                  <SiJavascript className="dark:text-slate-200 text-black" />
+                  <SiJavascript className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             tailwindcss={
               <Tooltip title="TailWind CSS" arrow>
                 <IconButton>
-                  <SiTailwindcss className="dark:text-slate-200 text-black" />
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
@@ -100,56 +100,56 @@ const Projects = () => {
             html5={
               <Tooltip title="HTML 5" arrow>
                 <IconButton>
-                  <SiHtml5 className="dark:text-slate-200 text-black" />
+                  <SiHtml5 className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             javascript={
               <Tooltip title="JavaScript" arrow>
                 <IconButton>
-                  <SiJavascript className="dark:text-slate-200 text-black" />
+                  <SiJavascript className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             css3={
               <Tooltip title="CSS 3" arrow>
                 <IconButton>
-                  <SiCss3 className="dark:text-slate-200 text-black" />
+                  <SiCss3 className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             tailwindcss={
               <Tooltip title="TailWind CSS" arrow>
                 <IconButton>
-                  <SiTailwindcss className="dark:text-slate-200 text-black" />
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             vite={
               <Tooltip title="Vite" arrow>
                 <IconButton>
-                  <SiVite className="dark:text-slate-200 text-black" />
+                  <SiVite className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             nodejs={
               <Tooltip title="NodeJS" arrow>
                 <IconButton>
-                  <SiNodedotjs className="dark:text-slate-200 text-black" />
+                  <SiNodedotjs className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             mongodb={
               <Tooltip title="MongoDB" arrow>
                 <IconButton>
-                  <SiMongodb className="dark:text-slate-200 text-black" />
+                  <SiMongodb className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
             expressjs={
               <Tooltip title="ExpressJS" arrow>
                 <IconButton>
-                  <SiExpress className="dark:text-slate-200 text-black" />
+                  <SiExpress className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }

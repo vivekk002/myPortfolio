@@ -15,25 +15,50 @@ const Menu = () => {
   };
 
   return (
-    <div className="text-lg tracking-wider translate-x-[180px] leading-10 border shadow-xl border-text-slate-300 text-[#00040f] dark:text-slate-300 mt-5 max-w-[150px] p-3 rounded-lg hidden  bg-gradient-to-tl from-[#e1e1e1] to-[#fff] dark:from-[#00040F] dark:to-[#0B274C] max-sm:block">
+    <div className="text-lg tracking-wider translate-x-[180px] leading-10 border shadow-xl border-primary/20 text-primary-dark dark:text-white mt-5 max-w-[150px] p-3 rounded-lg hidden bg-gradient-to-tl from-white to-primary/5 dark:from-primary-light dark:to-primary max-sm:block">
       <ul className="pl-2">
         <li>
-          <a href="#about">Home</a>
+          <a
+            href="#about"
+            className="hover:text-primary-accent transition-colors duration-300"
+          >
+            Home
+          </a>
         </li>
         <li>
-          <a href="#experience">Experience</a>
+          <a
+            href="#experience"
+            className="hover:text-primary-accent transition-colors duration-300"
+          >
+            Experience
+          </a>
         </li>
         <li>
-          <a href="#education">Education</a>
+          <a
+            href="#education"
+            className="hover:text-primary-accent transition-colors duration-300"
+          >
+            Education
+          </a>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <a
+            href="#projects"
+            className="hover:text-primary-accent transition-colors duration-300"
+          >
+            Projects
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a
+            href="#contact"
+            className="hover:text-primary-accent transition-colors duration-300"
+          >
+            Contact
+          </a>
         </li>
         <button
-          className="text-xl font-semibold tracking-widest"
+          className="text-xl font-semibold tracking-widest hover:text-primary-accent transition-colors duration-300"
           onClick={handleTheme}
         >
           {theme === "dark" ? "Dark" : "Light"}

@@ -26,15 +26,12 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <section className="EXPERIENCE p-5 mx-20 mb-10  font-['Poppins']  max-sm:p-2 max-sm:mx-5">
-        <h1 className="text-[#00040f] dark:text-slate-300 font-extrabold text-5xl text-center max-sm:text-4xl ">
+      <section className="SKILLS p-5 mx-20 mb-10 font-['Poppins'] max-sm:p-2 max-sm:mx-5">
+        <h1 className="text-primary-dark dark:text-white font-extrabold text-5xl text-center max-sm:text-4xl">
           SKILLS
         </h1>
-        <div
-          className=" grid grid-cols p-15 text-center "
-          data-aos="zoom-out-up"
-        >
-          <div className="grid grid-cols-7 mt-10 max-sm:grid-cols-3  max-sm:gap-5">
+        <div className="grid grid-cols p-15 text-center" data-aos="zoom-out-up">
+          <div className="grid grid-cols-7 mt-10 max-sm:grid-cols-3 max-sm:gap-5">
             <Image img={HTML} label="HTML"></Image>
             <Image img={CSS} label="CSS"></Image>
             <Image img={Javascript} label="JavaScript"></Image>
@@ -43,7 +40,7 @@ const Skills = () => {
             <Image img={ExpressJs} label="Express.js"></Image>
             <Image img={NodeJs} label="Node.js"></Image>
           </div>
-          <div className="grid grid-cols-7 mt-10 max-sm:grid-cols-3  max-sm:gap-5">
+          <div className="grid grid-cols-7 mt-10 max-sm:grid-cols-3 max-sm:gap-5">
             <Image img={CPP} label="C++"></Image>
             <Image img={C} label="C"></Image>
             <Image img={Python} label="Python"></Image>

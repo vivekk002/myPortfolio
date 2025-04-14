@@ -1,13 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-    @apply overflow-x-hidden scroll-smooth
+@layer base {
+  html {
+    @apply overflow-x-hidden scroll-smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-primary-light text-primary-dark dark:text-white transition-colors duration-400;
+  }
 }
 
-body {
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg 
+           bg-primary hover:bg-primary-dark text-white
+           dark:bg-primary-dark dark:hover:bg-primary-accent
+           transform transition-all duration-400 ease-smooth
+           hover:scale-105 hover:shadow-lg hover:shadow-primary/30
+           active:scale-95 active:shadow-none
+           focus:outline-none focus:ring-2 focus:ring-primary-accent focus:ring-offset-2
+           dark:focus:ring-offset-primary-light;
+  }
 
-    @apply dark:bg-[#00040f] bg-[#e2e2e2ab]
+  .card {
+    @apply bg-white dark:bg-primary rounded-lg shadow-lg
+           transition-all duration-400 ease-smooth
+           hover:shadow-xl hover:translate-y-[-4px] hover:scale-[1.02]
+           dark:hover:shadow-primary-dark/20
+           active:translate-y-[-2px] active:scale-[1.01];
+  }
+
+  .link {
+    @apply text-primary-dark dark:text-white
+           relative after:content-[''] after:absolute after:bottom-0 after:left-0
+           after:w-0 after:h-[2px] after:bg-primary-accent
+           after:transition-all after:duration-300 after:ease-smooth
+           hover:text-primary-accent dark:hover:text-primary-accent
+           hover:after:w-full
+           focus:outline-none focus:ring-2 focus:ring-primary-accent focus:ring-offset-2
+           dark:focus:ring-offset-primary-light;
+  }
+
+  .input {
+    @apply bg-white dark:bg-primary-light
+           border border-primary/20 dark:border-primary-dark/20
+           rounded-lg px-4 py-2
+           transition-all duration-400 ease-smooth
+           hover:border-primary/40 dark:hover:border-primary-dark/40
+           focus:outline-none focus:ring-2 focus:ring-primary-accent
+           focus:border-transparent
+           placeholder:text-primary-dark/50 dark:placeholder:text-white/50;
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 text-primary-dark dark:text-white
+           transition-all duration-300 ease-smooth
+           hover:text-primary-accent dark:hover:text-primary-accent
+           before:content-[''] before:absolute before:bottom-0 before:left-0
+           before:w-full before:h-[2px] before:bg-primary-accent
+           before:transform before:scale-x-0 before:origin-right
+           before:transition-transform before:duration-300 before:ease-smooth
+           hover:before:scale-x-100 hover:before:origin-left;
+  }
+
+  .icon-btn {
+    @apply p-2 rounded-full
+           bg-primary/10 dark:bg-primary-dark/10
+           text-primary-dark dark:text-white
+           transition-all duration-300 ease-smooth
+           hover:bg-primary/20 dark:hover:bg-primary-dark/20
+           hover:scale-110 hover:rotate-3
+           active:scale-95 active:rotate-0
+           focus:outline-none focus:ring-2 focus:ring-primary-accent
+           focus:ring-offset-2 dark:focus:ring-offset-primary-light;
+  }
 }
