@@ -38,6 +38,8 @@ const Project_prop = (props) => {
                 {props.nodejs}
                 {props.mongodb}
                 {props.expressjs}
+                {props.redux}
+                {props.cloudinary}
               </div>
             </div>
           </div>

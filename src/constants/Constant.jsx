@@ -3,6 +3,7 @@ import BIET from "../assets/biet.png";
 import C from "../assets/C.png";
 import CPP from "../assets/CPP.png";
 import CSS from "../assets/CSS.png";
+import Ecommerce from "../assets/Ecommerce.png";
 import Educations from "../assets/education.png";
 import ExpressJs from "../assets/expressjs.png";
 import GDSC from "../assets/GDSC.png";
@@ -52,4 +53,5 @@ export {
   MongoDB,
   Projects,
   Educations,
+  Ecommerce,
 };
