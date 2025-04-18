@@ -48,7 +48,7 @@ const Projects = () => {
             title="Portfolio Website"
             para="Personal portfolio website created with react and Tailwind CSS"
             img={Portfolio}
-            link="https://my-portfolio-git-main-vivekk002s-projects.vercel.app/"
+            link="https://vivekkumar.space/"
             github_link="https://github.com/vivekk002/myPortfolio.git"
             react={
               <Tooltip title="React" arrow>
