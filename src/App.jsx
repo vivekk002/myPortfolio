@@ -4,7 +4,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import HashLoader from "react-spinners/HashLoader";
+import { PropagateLoader } from "react-spinners";
 
 import { useState, useEffect } from "react";
 
@@ -25,15 +25,16 @@ const App = () => {
       setLoading(false);
     }, 3000);
   }, []);
+
   return (
     <>
       {loading ? (
         <div className="flex h-screen justify-center items-center bg-[#00040f]">
-          <HashLoader
-            color="#0891b2"
+          <PropagateLoader
+            color="#FFFFFF"
             loading={loading}
             cssOverride={override}
-            size={90}
+            size={50}
             aria-label="Loading Spinner"
             data-testid="loader"
           />

@@ -27,7 +27,7 @@ const About = () => {
           <img
             src={Vivek}
             alt="Vivek"
-            className="rounded-full w-[300px] h-[300px] object-cover transition-all duration-300 ease-smooth hover:scale-105 hover:shadow-xl hover:shadow-primary/30 max-sm:hidden"
+            className="rounded-full w-[360px] h-[360px] object-cover transition-all duration-300 ease-smooth hover:scale-105 hover:shadow-xl hover:shadow-primary/30 max-sm:hidden"
           />
         </div>
       </section>
