@@ -84,7 +84,7 @@ const Navbar = () => {
                 {"<Vivek/>"}
               </a>
             </div>
-            <div className="NAVLINKS text-[20px] translate-x-[80px] max-sm:hidden flex gap-12 text-white">
+            <div className="NAVLINKS text-[20px] max-sm:hidden flex gap-12 text-white">
               <a
                 href="#about"
                 className={`hover:text-primary-accent transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 ${
@@ -156,7 +156,14 @@ const Navbar = () => {
           </div>
         </section>
       )}
-      {nav && <Menu setNav={setNav} activeSection={activeSection} />}
+      {nav && (
+        <Menu
+          setNav={setNav}
+          activeSection={activeSection}
+          theme={theme}
+          setTheme={setTheme}
+        />
+      )}
       <div className="h-20"></div>{" "}
       {/* Spacer to prevent content from hiding under navbar */}
     </>

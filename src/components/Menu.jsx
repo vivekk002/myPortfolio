@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
+import { HiSun, HiMoon } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
-const Menu = ({ setNav, activeSection }) => {
-  const [theme, setTheme] = useState("light");
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-  }, [theme]);
-
+const Menu = ({ setNav, activeSection, theme, setTheme }) => {
   const handleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -21,9 +14,17 @@ const Menu = ({ setNav, activeSection }) => {
   const isActive = (section) => activeSection === section;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-tl from-white to-primary/5 dark:from-primary-light dark:to-primary p-5 max-sm:block">
-      <div className="text-lg tracking-wider leading-10 text-primary-dark dark:text-white">
-        <ul className="pl-2">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-tl from-white to-primary/95 dark:from-primary-light dark:to-primary p-5 h-screen w-full">
+      <div className="absolute top-4 right-4">
+        <button
+          onClick={handleClick}
+          className="text-3xl text-white hover:text-primary-accent transition-colors duration-300 hover:scale-110"
+        >
+          <IoClose />
+        </button>
+      </div>
+      <div className="text-lg tracking-wider leading-10 text-primary-dark dark:text-white flex flex-col items-center justify-center h-full">
+        <ul className="pl-2 space-y-6 text-center">
           <li>
             <a
               href="#about"
@@ -79,15 +80,21 @@ const Menu = ({ setNav, activeSection }) => {
               Contact
             </a>
           </li>
-          <button
-            className="text-xl font-semibold tracking-widest hover:text-primary-accent transition-colors duration-300"
-            onClick={() => {
-              handleTheme();
-              handleClick();
-            }}
-          >
-            {theme === "dark" ? "Dark" : "Light"}
-          </button>
+          <li>
+            <button
+              className="text-2xl hover:text-primary-accent transition-colors duration-300 hover:scale-110"
+              onClick={() => {
+                handleTheme();
+                handleClick();
+              }}
+            >
+              {theme === "dark" ? (
+                <HiMoon className="text-white" />
+              ) : (
+                <HiSun className="text-white" />
+              )}
+            </button>
+          </li>
         </ul>
       </div>
     </div>

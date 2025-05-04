@@ -109,7 +109,7 @@ const Contact = () => {
                   transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 dark:hover:shadow-white/30
                   active:scale-95"
                 >
-                  <a href="https://drive.google.com/file/d/1AzsnWgReXI9s-SPmXock1U48Pdk4Sb2r/view?usp=drive_link">
+                  <a href="https://drive.google.com/file/d/1-RizznIjyNOBOxFafQTPwYiFeO7C14Qc/view?usp=sharing">
                     Resume
                   </a>
                 </button>
