@@ -30,7 +30,8 @@ A fully responsive, animated personal portfolio website to showcase my skills, p
 
 ## 📷 Screenshots
 
-*(Add screenshots or GIFs showing different sections of your site — home, about, projects, etc.)*
+![image](https://github.com/user-attachments/assets/fec6ea01-58a4-4260-b5b5-68d56ff4b12c)
+
 
 ---
 
