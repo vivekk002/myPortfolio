@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-import { NomadNX, Projects } from "../constants/Constant";
+import { NomadNx, Projects } from "../constants/Constant";
 
 const Experience = () => {
   useEffect(() => {
@@ -28,20 +28,18 @@ const Experience = () => {
             data-aos="zoom-in-up"
           >
             <Exp_prop
-              img={NomadNX}
+              img={NomadNx}
               title="Software Development Intern"
-              subtitle=" NomadNX Services"
+              subtitle="NomadNX Services"
               date="Novembar 2024 - April 2025"
-              para="-AS a software development intern, I have worked on diverse projects, including designing front-end interfaces for ERP systems and websites.  I have 
-consistently aligned my efforts with the company’s goals and aspirations, contributing through dedication and hard 
-work. "
+              para="- As a software development intern, I have worked on diverse projects, including designing front-end interfaces for ERP systems and websites.  I have consistently aligned my efforts with the company's goals and aspirations, contributing through dedication and hard work."
             />
             <Exp_prop
               img={Projects}
               title="Full-Stack Web Developer"
               subtitle=""
               date="August 2024 - present"
-              para="- As a full-stack web developer, I worked on several projects, applying my skills in MERN stack and modern web technologies to build scalable and responsive applications. "
+              para="- As a full-stack web developer, I worked on several projects, applying my skills in MERN stack and modern web technologies to build scalable and responsive applications."
             />
           </div>
         </div>
