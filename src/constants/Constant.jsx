@@ -17,7 +17,10 @@ import HTML from "../assets/HTML.png";
 import Javascript from "../assets/Javascript.png";
 import KDE from "../assets/kde.png";
 import MongoDB from "../assets/mongodb.png";
+
 import NodeJs from "../assets/nodejs.png";
+import NomadNX from "../assets/NomadNX.png";
+
 import Portfolio from "../assets/portfolio.jpg";
 import Projects from "../assets/projects.png";
 import Python from "../assets/Python.png";
@@ -54,4 +57,5 @@ export {
   Projects,
   Educations,
   Ecommerce,
+  NomadNX,
 };
