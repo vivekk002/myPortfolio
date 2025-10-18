@@ -37,12 +37,13 @@ const App = () => {
           {/* Interactive Background */}
           <InteractiveBackground />
 
-          {/* NAVBAR OUTSIDE - highest z-index */}
+          {/* Navbar */}
           <Navbar />
 
-          {/* Content - BALANCED OPACITY */}
+          {/* Content */}
           <div className="relative bg-white/80 dark:bg-primary/90 backdrop-blur-sm">
-            <div className="h-20" /> {/* Spacer for navbar */}
+            {/* Smaller spacer on mobile */}
+            <div className="h-16 md:h-20" />
             <About />
             <Experience />
             <Education />

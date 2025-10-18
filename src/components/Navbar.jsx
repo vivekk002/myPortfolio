@@ -57,28 +57,29 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ALWAYS VISIBLE NAVBAR - REMOVED SPACER */}
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-smooth
         ${
           scrolled
-            ? "bg-primary/95 dark:bg-primary-light/95 backdrop-blur-md shadow-xl py-3"
-            : "bg-primary/90 dark:bg-primary-light/90 backdrop-blur-sm py-5"
+            ? "bg-primary/95 dark:bg-primary-light/95 backdrop-blur-md shadow-xl py-2 md:py-3"
+            : "bg-primary/90 dark:bg-primary-light/90 backdrop-blur-sm py-3 md:py-5"
         } 
-        px-8 max-sm:px-4 font-poppins mx-4 max-sm:mx-2 rounded-b-2xl
+        px-3 md:px-8 font-poppins mx-2 md:mx-4 rounded-b-xl md:rounded-b-2xl
         border-b-2 ${
           scrolled ? "border-accent-600/30" : "border-accent-600/20"
         }`}
       >
         <div className="flex justify-between items-center max-w-7xl mx-auto">
+          {/* Logo - smaller on mobile */}
           <a
             href="#about"
-            className="text-3xl font-bold bg-gradient-to-r from-white via-accent-300 to-accent-500 bg-clip-text text-transparent
-              max-sm:text-2xl transition-all duration-300 hover:scale-105 hover:from-accent-300 hover:to-white"
+            className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white via-accent-300 to-accent-500 bg-clip-text text-transparent
+              transition-all duration-300 hover:scale-105 hover:from-accent-300 hover:to-white"
           >
             {"<Vivek/>"}
           </a>
 
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8 text-lg">
             {[
               { href: "#about", label: "Home" },
@@ -120,13 +121,14 @@ const Navbar = () => {
             </button>
           </div>
 
+          {/* Mobile Menu Button - compact */}
           <button
             onClick={() => setNav(!nav)}
-            className="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white 
+            className="md:hidden p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white 
               transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent/50"
             aria-label="Open menu"
           >
-            <CgMenuRightAlt className="text-3xl" />
+            <CgMenuRightAlt className="text-2xl" />
           </button>
         </div>
       </nav>
