@@ -1,5 +1,6 @@
 import Airbnb from "../assets/Airbnb.png";
 import BIET from "../assets/biet.png";
+import BrainIcon from "../assets/BrainIcon.svg";
 import C from "../assets/C.png";
 import CPP from "../assets/CPP.png";
 import CSS from "../assets/CSS.png";
@@ -27,6 +28,9 @@ import Python from "../assets/Python.png";
 import react from "../assets/React.png";
 import Employee from "../assets/Employee.png";
 import Game from "../assets/Stone.jpg";
+
+import SecondBrain from "../assets/SecondBrain.png";
+
 import TailwindCSS from "../assets/TailwindCSS.png";
 import Vite from "../assets/Vite.png";
 
@@ -58,4 +62,6 @@ export {
   Educations,
   Ecommerce,
   NomadNx,
+  SecondBrain,
+  BrainIcon,
 };

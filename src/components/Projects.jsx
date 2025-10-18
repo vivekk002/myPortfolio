@@ -6,6 +6,7 @@ import {
   Airbnb,
   Game,
   Ecommerce,
+  SecondBrain,
 } from "../constants/Constant";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
@@ -44,6 +45,125 @@ const Projects = () => {
           className="PROJECTS mt-16 grid gap-10 grid-cols-2 max-sm:grid-cols-1"
           data-aos="zoom-out-down"
         >
+          <Project_prop
+            title="Second Brain AI"
+            para="A MERN stack AI-powered content organising plateform enabling users to efficiently manage and retrieve data search by using vector data embeddings ."
+            img={SecondBrain}
+            link="https://secontbrainfe.onrender.com/"
+            github_link="https://github.com/vivekk002/secontBrainfe.git"
+            react={
+              <Tooltip title="React" arrow>
+                <IconButton>
+                  <SiReact className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            javascript={
+              <Tooltip title="TypeScript" arrow>
+                <IconButton>
+                  <SiJavascript className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            tailwindcss={
+              <Tooltip title="TailWind CSS" arrow>
+                <IconButton>
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            vite={
+              <Tooltip title="Vite" arrow>
+                <IconButton>
+                  <SiVite className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            nodejs={
+              <Tooltip title="NodeJS" arrow>
+                <IconButton>
+                  <SiNodedotjs className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            mongodb={
+              <Tooltip title="MongoDB" arrow>
+                <IconButton>
+                  <SiMongodb className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            redux={
+              <Tooltip title="Redux" arrow>
+                <IconButton>
+                  <SiRedux className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+          />
+          <Project_prop
+            title="E-Commerce Website"
+            para="A MERN stack e-commerce site with client/admin dashboards, secure auth, product management, and image upload functionality. Used Redux for smooth state handling."
+            img={Ecommerce}
+            link="https://e-com-website-1-zahm.onrender.com"
+            github_link="https://github.com/vivekk002/e-com-website.git"
+            react={
+              <Tooltip title="React" arrow>
+                <IconButton>
+                  <SiReact className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            javascript={
+              <Tooltip title="JavaScript" arrow>
+                <IconButton>
+                  <SiJavascript className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            tailwindcss={
+              <Tooltip title="TailWind CSS" arrow>
+                <IconButton>
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            vite={
+              <Tooltip title="Vite" arrow>
+                <IconButton>
+                  <SiVite className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            nodejs={
+              <Tooltip title="NodeJS" arrow>
+                <IconButton>
+                  <SiNodedotjs className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            mongodb={
+              <Tooltip title="MongoDB" arrow>
+                <IconButton>
+                  <SiMongodb className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            redux={
+              <Tooltip title="Redux" arrow>
+                <IconButton>
+                  <SiRedux className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            cloudinary={
+              <Tooltip title="Cloudinary" arrow>
+                <IconButton>
+                  <FaCloud className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+          />
           <Project_prop
             title="Portfolio Website"
             para="Personal portfolio website created with react and Tailwind CSS"
@@ -159,69 +279,6 @@ const Projects = () => {
               <Tooltip title="ExpressJS" arrow>
                 <IconButton>
                   <SiExpress className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-          />
-          <Project_prop
-            title="E-Commerce Website"
-            para="A MERN stack e-commerce site with client/admin dashboards, secure auth, product management, and image upload functionality. Used Redux for smooth state handling."
-            img={Ecommerce}
-            link="https://e-com-website-1-zahm.onrender.com"
-            github_link="https://github.com/vivekk002/e-com-website.git"
-            react={
-              <Tooltip title="React" arrow>
-                <IconButton>
-                  <SiReact className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            javascript={
-              <Tooltip title="JavaScript" arrow>
-                <IconButton>
-                  <SiJavascript className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            tailwindcss={
-              <Tooltip title="TailWind CSS" arrow>
-                <IconButton>
-                  <SiTailwindcss className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            vite={
-              <Tooltip title="Vite" arrow>
-                <IconButton>
-                  <SiVite className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            nodejs={
-              <Tooltip title="NodeJS" arrow>
-                <IconButton>
-                  <SiNodedotjs className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            mongodb={
-              <Tooltip title="MongoDB" arrow>
-                <IconButton>
-                  <SiMongodb className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            redux={
-              <Tooltip title="Redux" arrow>
-                <IconButton>
-                  <SiRedux className="dark:text-white text-primary-dark" />
-                </IconButton>
-              </Tooltip>
-            }
-            cloudinary={
-              <Tooltip title="Cloudinary" arrow>
-                <IconButton>
-                  <FaCloud className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
