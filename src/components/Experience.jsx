@@ -12,6 +12,7 @@ const Experience = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <>
       <section
@@ -19,33 +20,43 @@ const Experience = () => {
         className="p-5 mx-20 mb-10 font-medium font-['Poppins'] max-sm:p-2 max-sm:mx-5"
       >
         <div className="WRAPPER mt-12">
-          <h1 className="text-primary-dark dark:text-white font-extrabold text-5xl text-center">
-            EXPERIENCE
-          </h1>
+          {/* Section Header */}
+          <div className="mb-16 max-sm:mb-10">
+            <h1 className="text-primary-dark dark:text-white font-extrabold text-5xl text-center max-sm:text-4xl mb-3">
+              Experience
+            </h1>
+            <p className="text-primary-dark/60 dark:text-white/60 text-center text-lg max-sm:text-base">
+              My professional journey
+            </p>
+          </div>
 
+          {/* Experience Cards */}
           <div
-            className="EXPERIENCE mt-16 grid gap-20 max-sm:gap-10 max-sm:grid-cols-1 grid-cols-3"
+            className="EXPERIENCE mt-16 grid gap-10 max-sm:gap-10 max-sm:grid-cols-1 grid-cols-2"
             data-aos="zoom-in-up"
           >
             <Exp_prop
               img={NomadNx}
               title="Software Development Intern"
               subtitle="NomadNX Services"
-              date="Novembar 2024 - April 2025"
-              para="- As a software development intern, I have worked on diverse projects, including designing front-end interfaces for ERP systems and websites.  I have consistently aligned my efforts with the company's goals and aspirations, contributing through dedication and hard work."
+              date="Nov 2024 - Apr 2025"
+              para="Designed and developed responsive front-end interfaces for ERP systems and client websites using React and modern CSS frameworks. Collaborated with cross-functional teams to deliver features aligned with business objectives, contributing to improved user experience and system efficiency."
+              badge="Internship"
             />
             <Exp_prop
               img={Projects}
               title="Full-Stack Web Developer"
-              subtitle=""
-              date="August 2024 - present"
-              para="- As a full-stack web developer, I worked on several projects, applying my skills in MERN stack and modern web technologies to build scalable and responsive applications."
+              subtitle="Freelance / Personal Projects"
+              date="Aug 2024 - Present"
+              para="Built and deployed multiple full-stack applications using the MERN stack with TypeScript. Implemented features including JWT authentication, RESTful APIs, real-time updates, vector embeddings for AI search, and cloud image management. Focused on scalable architecture and responsive UI design."
+              badge="Active"
             />
           </div>
         </div>
       </section>
-      <Skills></Skills>
+      <Skills />
     </>
   );
 };
+
 export default Experience;

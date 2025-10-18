@@ -5,23 +5,54 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Deep Professional Blue (60% - backgrounds)
         primary: {
-          DEFAULT: "#000000", // Pure black
-          dark: "#000000", // Pure black
-          light: "#333333", // Dark gray
-          accent: "#666666", // Medium gray
-          accent2: "#999999", // Light gray
-          accent3: "#CCCCCC", // Very light gray
-          accent4: "#FFFFFF", // Pure white
+          DEFAULT: "#0A192F", // Deep navy
+          dark: "#060D1F",
+          light: "#112240",
+          accent: "#1A365D",
+          accent2: "#2C5282",
+          accent3: "#4299E1",
+          accent4: "#63B3ED",
         },
-        primary_accent: {
-          DEFAULT: "#FFFFFF", // Pure white
-          dark: "#FFFFFF", // Pure white
-          light: "#F5F5F5", // Off-white
-          accent: "#E5E5E5", // Light gray
-          accent2: "#D5D5D5", // Slightly darker gray
-          accent3: "#C5C5C5", // Medium gray
-          accent4: "#B5B5B5", // Darker gray
+        // Bright Cyan/Blue Accent (30% - cards, surfaces)
+        accent: {
+          DEFAULT: "#64FFDA", // Bright cyan
+          dark: "#4FD1C5",
+          light: "#9DECF9",
+          100: "#E6FFFA",
+          200: "#B2F5EA",
+          300: "#81E6D9",
+          400: "#4FD1C5",
+          500: "#38B2AC",
+          600: "#319795",
+          700: "#2C7A7B",
+        },
+        // Vibrant Orange/Coral (10% - CTAs, highlights)
+        orange: {
+          DEFAULT: "#FF6B6B", // Coral red
+          dark: "#FF5252",
+          light: "#FF8E8E",
+          300: "#FFA5A5",
+          400: "#FF8E8E",
+          500: "#FF6B6B",
+          600: "#FF5252",
+        },
+        // Semantic colors
+        success: {
+          DEFAULT: "#10B981",
+          dark: "#059669",
+          light: "#34D399",
+        },
+        warning: {
+          DEFAULT: "#F59E0B",
+          dark: "#D97706",
+          light: "#FBBF24",
+        },
+        danger: {
+          DEFAULT: "#EF4444",
+          dark: "#DC2626",
+          light: "#F87171",
         },
       },
       fontFamily: {
