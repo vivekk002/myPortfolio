@@ -149,7 +149,7 @@ const Contact = () => {
             {/* Action Buttons */}
             <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
               <a
-                href="https://drive.google.com/file/d/1ZlOHq-1R9bn6CgRWm2R1_nzFRsD5VC9f/view?usp=sharing"
+                href="https://drive.google.com/file/d/1x-p_drbQsitXBf1P9ts7EeEetUE4NtjL/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn px-6 py-3 bg-gradient-to-r from-primary to-primary-accent dark:from-white dark:to-primary 
