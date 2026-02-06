@@ -120,7 +120,7 @@ const Contact = () => {
                 },
                 {
                   icon: SiTwitter,
-                  href: "https://twitter.com/silent_saffer",
+                  href: "https://twitter.com/vivekrajput1125",
                   label: "Twitter",
                 },
                 {
