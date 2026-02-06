@@ -1,10 +1,13 @@
 import Airbnb from "../assets/Airbnb.png";
+import LodgeLogic from "../assets/LodgeLogic.png";
+import DevCollab from "../assets/DevCollab.png";
 import BIET from "../assets/biet.png";
 import BrainIcon from "../assets/BrainIcon.svg";
 import C from "../assets/C.png";
 import CPP from "../assets/CPP.png";
 import CSS from "../assets/CSS.png";
 import Ecommerce from "../assets/Ecommerce.png";
+import SwiftCart from "../assets/SwiftCart.svg";
 import Educations from "../assets/education.png";
 import ExpressJs from "../assets/expressjs.png";
 import GDSC from "../assets/GDSC.png";
@@ -61,7 +64,10 @@ export {
   Projects,
   Educations,
   Ecommerce,
+  SwiftCart,
   NomadNx,
   SecondBrain,
   BrainIcon,
+  LodgeLogic,
+  DevCollab,
 };

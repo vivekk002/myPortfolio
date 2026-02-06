@@ -52,6 +52,10 @@ const Project_prop = (props) => {
                 props.expressjs,
                 props.redux,
                 props.cloudinary,
+                props.nextjs,
+                props.postgresql,
+                props.prisma,
+                props.socketio,
               ]
                 .filter(Boolean)
                 .map((tech, index) => (
@@ -106,8 +110,8 @@ const Project_prop = (props) => {
               props.status === "Live"
                 ? "bg-green-500/10 text-green-600 dark:text-green-400 ring-1 ring-green-500/20"
                 : props.status === "In Progress"
-                ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 ring-1 ring-yellow-500/20"
-                : "bg-primary/10 text-primary-dark dark:text-white ring-1 ring-primary/20"
+                  ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 ring-1 ring-yellow-500/20"
+                  : "bg-primary/10 text-primary-dark dark:text-white ring-1 ring-primary/20"
             }`}
           >
             {props.status}

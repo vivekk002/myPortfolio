@@ -7,6 +7,9 @@ import {
   Game,
   Ecommerce,
   SecondBrain,
+  LodgeLogic,
+  DevCollab,
+  SwiftCart,
 } from "../constants/Constant";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
@@ -25,6 +28,10 @@ import {
   SiExpress,
   SiRedux,
   SiTypescript,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiSocketdotio,
 } from "react-icons/si";
 import { FaCloud } from "react-icons/fa";
 
@@ -47,6 +54,113 @@ const Projects = () => {
           className="PROJECTS mt-16 grid gap-10 grid-cols-2 max-sm:grid-cols-1"
           data-aos="zoom-out-down"
         >
+          <Project_prop
+            title="DevCollab"
+            para="A modern, real-time team collaboration platform built with Next.js 15. Features workspace management, document editing, task tracking, and team chat in a unified green-themed interface."
+            img={DevCollab}
+            link=""
+            github_link="https://github.com/vivekk002/dev-collab.git"
+            status="In Progress"
+            nextjs={
+              <Tooltip title="Next.js" arrow>
+                <IconButton>
+                  <SiNextdotjs className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            react={
+              <Tooltip title="React" arrow>
+                <IconButton>
+                  <SiReact className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            tailwindcss={
+              <Tooltip title="Tailwind CSS" arrow>
+                <IconButton>
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            postgresql={
+              <Tooltip title="PostgreSQL" arrow>
+                <IconButton>
+                  <SiPostgresql className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            prisma={
+              <Tooltip title="Prisma" arrow>
+                <IconButton>
+                  <SiPrisma className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            socketio={
+              <Tooltip title="Socket.io" arrow>
+                <IconButton>
+                  <SiSocketdotio className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+          />
+          <Project_prop
+            title="LodgeLogic"
+            para="A full-stack hotel booking platform revolutionizing discovery and management. Features smart search, real-time availability, secure payments, and comprehensive dashboards."
+            img={LodgeLogic}
+            link=""
+            github_link="https://github.com/vivekk002/lodgelogic"
+            status="Completed"
+            react={
+              <Tooltip title="React" arrow>
+                <IconButton>
+                  <SiReact className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            javascript={
+              <Tooltip title="TypeScript" arrow>
+                <IconButton>
+                  <SiTypescript className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            tailwindcss={
+              <Tooltip title="Tailwind CSS" arrow>
+                <IconButton>
+                  <SiTailwindcss className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            vite={
+              <Tooltip title="Vite" arrow>
+                <IconButton>
+                  <SiVite className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            nodejs={
+              <Tooltip title="Node.js" arrow>
+                <IconButton>
+                  <SiNodedotjs className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            mongodb={
+              <Tooltip title="MongoDB" arrow>
+                <IconButton>
+                  <SiMongodb className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            expressjs={
+              <Tooltip title="Express.js" arrow>
+                <IconButton>
+                  <SiExpress className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+          />
           <Project_prop
             title="MindVault"
             para="AI-powered MERN stack content organizer with vector embeddings for intelligent search and retrieval. Features tag-based organization, real-time updates, and semantic search using OpenAI embeddings stored in MongoDB."
@@ -115,7 +229,7 @@ const Projects = () => {
           <Project_prop
             title="SwiftCart"
             para="Full-featured MERN e-commerce with dual dashboards for customers and admins. Includes JWT authentication, Redux state management, Cloudinary image uploads, product CRUD, order tracking, and responsive design."
-            img={Ecommerce}
+            img={SwiftCart}
             link="https://e-com-website-1-zahm.onrender.com"
             github_link="https://github.com/vivekk002/e-com-website.git"
             status="Live"
