@@ -48,7 +48,7 @@ const Projects = () => {
           data-aos="zoom-out-down"
         >
           <Project_prop
-            title="Second Brain AI"
+            title="MindVault"
             para="AI-powered MERN stack content organizer with vector embeddings for intelligent search and retrieval. Features tag-based organization, real-time updates, and semantic search using OpenAI embeddings stored in MongoDB."
             img={SecondBrain}
             link="https://secontbrainfe.onrender.com/"
@@ -113,7 +113,7 @@ const Projects = () => {
           />
 
           <Project_prop
-            title="E-Commerce Platform"
+            title="SwiftCart"
             para="Full-featured MERN e-commerce with dual dashboards for customers and admins. Includes JWT authentication, Redux state management, Cloudinary image uploads, product CRUD, order tracking, and responsive design."
             img={Ecommerce}
             link="https://e-com-website-1-zahm.onrender.com"

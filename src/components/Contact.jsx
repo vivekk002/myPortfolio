@@ -37,7 +37,7 @@ const Contact = () => {
         "service_t8pyqed",
         "template_fac2z4t",
         formData,
-        "JfSxIXTlTgFSl1IMD"
+        "JfSxIXTlTgFSl1IMD",
       );
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
@@ -149,7 +149,7 @@ const Contact = () => {
             {/* Action Buttons */}
             <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
               <a
-                href="https://drive.google.com/file/d/1x-p_drbQsitXBf1P9ts7EeEetUE4NtjL/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1ftQ0AofbiGLzhRCMgO7quI0TLDY44akO/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn px-6 py-3 bg-gradient-to-r from-primary to-primary-accent dark:from-white dark:to-primary 
