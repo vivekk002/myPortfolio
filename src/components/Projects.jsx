@@ -109,7 +109,7 @@ const Projects = () => {
             para="A full-stack hotel booking platform revolutionizing discovery and management. Features smart search, real-time availability, secure payments, and comprehensive dashboards."
             img={LodgeLogic}
             link=""
-            github_link="https://github.com/vivekk002/lodgelogic"
+            github_link="https://github.com/vivekk002/L-L-hm.git"
             status="Completed"
             react={
               <Tooltip title="React" arrow>
