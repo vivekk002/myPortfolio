@@ -6,9 +6,14 @@ import {
   SiTwitter,
   SiGmail,
 } from "react-icons/si";
+import { FaPhone } from "react-icons/fa";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Vivek from "../assets/Vivek.png";
+
+const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,15 +34,21 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!emailServiceId || !emailTemplateId || !emailPublicKey) {
+      setSubmitStatus("configuration-error");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
       await emailjs.send(
-        "service_t8pyqed",
-        "template_fac2z4t",
+        emailServiceId,
+        emailTemplateId,
         formData,
-        "JfSxIXTlTgFSl1IMD",
+        emailPublicKey,
       );
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });
@@ -73,7 +84,7 @@ const Contact = () => {
             <div className="relative">
               <img
                 src={Vivek}
-                alt="Vivek Kumar - Full Stack Developer"
+                alt="Vivek Kumar - Backend Developer"
                 className="h-40 w-40 max-sm:h-32 max-sm:w-32 rounded-full object-cover
                   ring-4 ring-primary/20 dark:ring-primary-accent/20
                   transition-all duration-500 ease-smooth
@@ -92,12 +103,11 @@ const Contact = () => {
               Vivek Kumar
             </h2>
             <p className="text-primary-dark/90 dark:text-white/80 font-medium text-sm mb-4">
-              Full-Stack Developer | MERN Stack Enthusiast
+              Backend Developer | Full-Stack Builder
             </p>
             <p className="text-primary-dark/70 dark:text-white/70 leading-relaxed mb-6 max-w-md mx-auto lg:mx-0">
-              Passionate about building scalable web applications with modern
-              technologies. Always eager to solve complex problems and learn new
-              skills. Let's create something amazing together! 🚀
+              I build secure, scalable APIs and full-stack applications with Node.js,
+              TypeScript, PostgreSQL, MongoDB, and React. Let&apos;s build something reliable.
             </p>
 
             {/* Social Links */}
@@ -125,14 +135,19 @@ const Contact = () => {
                 },
                 {
                   icon: SiGmail,
-                  href: "mailto:vivekkumar.akvk@gmail.com",
+                  href: "mailto:vivekkumar.contacts@gmail.com",
                   label: "Email",
+                },
+                {
+                  icon: FaPhone,
+                  href: "tel:+919870977572",
+                  label: "Call Vivek",
                 },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
-                  target="_blank"
+                  target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   aria-label={label}
                   className="group/icon p-3 rounded-xl bg-primary/5 dark:bg-primary-accent/10 
@@ -149,7 +164,7 @@ const Contact = () => {
             {/* Action Buttons */}
             <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
               <a
-                href="https://drive.google.com/file/d/1ftQ0AofbiGLzhRCMgO7quI0TLDY44akO/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1YKYVaHUMjixdHOFEtNDD3ft0JwfbeihZ/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn px-6 py-3 bg-gradient-to-r from-primary to-primary-accent dark:from-white dark:to-primary 
@@ -206,6 +221,9 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                autoComplete="name"
+                minLength={2}
+                maxLength={100}
                 className="w-full px-4 py-3 rounded-lg 
                   bg-white dark:bg-primary/20 
                   border-2 border-primary/20 dark:border-white/20
@@ -231,6 +249,8 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                autoComplete="email"
+                maxLength={254}
                 className="w-full px-4 py-3 rounded-lg 
                   bg-white dark:bg-primary/20 
                   border-2 border-primary/20 dark:border-white/20
@@ -255,6 +275,8 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                minLength={10}
+                maxLength={2000}
                 rows={5}
                 className="w-full px-4 py-3 rounded-lg 
                   bg-white dark:bg-primary/20 
@@ -302,13 +324,18 @@ const Contact = () => {
             </button>
 
             {submitStatus === "success" && (
-              <div className="p-4 bg-green-500/10 border border-green-500/30 text-green-700 dark:text-green-400 rounded-lg text-center text-sm font-medium animate-fade-in">
+              <div role="status" className="p-4 bg-green-500/10 border border-green-500/30 text-green-700 dark:text-green-400 rounded-lg text-center text-sm font-medium animate-fade-in">
                 ✅ Message sent successfully! I'll get back to you soon.
               </div>
             )}
             {submitStatus === "error" && (
-              <div className="p-4 bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-400 rounded-lg text-center text-sm font-medium animate-fade-in">
+              <div role="alert" className="p-4 bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-400 rounded-lg text-center text-sm font-medium animate-fade-in">
                 ❌ Oops! Something went wrong. Please try again.
+              </div>
+            )}
+            {submitStatus === "configuration-error" && (
+              <div role="alert" className="p-4 bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-400 rounded-lg text-center text-sm font-medium animate-fade-in">
+                The contact form is temporarily unavailable. Please email me directly.
               </div>
             )}
           </form>

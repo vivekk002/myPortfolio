@@ -2,12 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/vivekLOGO.png" />
+    <link rel="icon" type="image/png" href="/src/assets/vivekLOGO.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vivek Kumar</title>
+    <meta name="description" content="Vivek Kumar is a backend developer building secure APIs and full-stack applications with Node.js, TypeScript, PostgreSQL, and MongoDB." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://vivekkumar.space/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vivekkumar.space/" />
+    <meta property="og:title" content="Vivek Kumar | Backend Developer" />
+    <meta property="og:description" content="Portfolio of Vivek Kumar, a backend developer specializing in secure APIs and modern full-stack applications." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Vivek Kumar | Backend Developer" />
+    <meta name="twitter:description" content="Portfolio of Vivek Kumar, a backend developer specializing in secure APIs and modern full-stack applications." />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("theme");
+        const isDark = savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", isDark);
+      })();
+    </script>
+    <title>Vivek Kumar | Backend Developer</title>
   </head>
 
-  <body className="darkMode">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,25 +1,69 @@
 import { HiSun, HiMoon } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
+import PropTypes from "prop-types";
+import { useEffect, useRef } from "react";
 
-const Menu = ({ setNav, activeSection, theme, setTheme }) => {
+const Menu = ({ onClose, activeSection, theme, setTheme }) => {
+  const dialogRef = useRef(null);
+  const closeButtonRef = useRef(null);
+
+  useEffect(() => {
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusableElements = dialogRef.current?.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      if (!focusableElements?.length) return;
+
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
   const handleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const handleClick = () => {
-    setNav(false);
+    onClose();
   };
 
   const isActive = (section) => activeSection === section;
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-gradient-to-br from-primary via-primary-light to-primary-accent 
+      ref={dialogRef}
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      className="fixed inset-0 z-[110] bg-gradient-to-br from-primary via-primary-light to-primary-accent
       dark:from-primary-dark dark:via-primary dark:to-primary-light 
       animate-fade-in"
     >
       {/* Close Button */}
       <button
+        ref={closeButtonRef}
         onClick={handleClick}
         className="absolute top-6 right-6 p-3 rounded-full bg-white/10 hover:bg-white/20 
           text-white text-3xl transition-all duration-300 hover:scale-110 hover:rotate-90
@@ -71,7 +115,7 @@ const Menu = ({ setNav, activeSection, theme, setTheme }) => {
               }}
               className="p-4 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-accent-300 
                 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent/50"
-              aria-label="Toggle theme"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
               {theme === "dark" ? (
                 <HiMoon className="text-3xl" />
@@ -84,6 +128,13 @@ const Menu = ({ setNav, activeSection, theme, setTheme }) => {
       </div>
     </div>
   );
+};
+
+Menu.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  activeSection: PropTypes.string.isRequired,
+  theme: PropTypes.oneOf(["light", "dark"]).isRequired,
+  setTheme: PropTypes.func.isRequired,
 };
 
 export default Menu;

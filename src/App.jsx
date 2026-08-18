@@ -2,47 +2,45 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import InteractiveBackground from "./components/InteractiveBackground";
-import Loader from "./components/Loader";
-import { useState, useEffect } from "react";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    AOS.init({
+      duration: 700,
+      once: true,
+      disable: reducedMotion,
+    });
   }, []);
 
   return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="relative min-h-screen">
-          {/* Interactive Background */}
-          <InteractiveBackground />
+    <div className="relative min-h-screen isolate">
+      <a
+        href="#main-content"
+        className="sr-only absolute left-4 top-4 z-[200] rounded bg-white px-4 py-2 text-primary focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-accent"
+      >
+        Skip to content
+      </a>
+      <InteractiveBackground />
+      <Navbar />
 
-          {/* Navbar */}
-          <Navbar />
-
-          {/* Content */}
-          <div className="relative bg-white/80 dark:bg-primary/90 backdrop-blur-sm">
-            {/* Smaller spacer on mobile */}
-            <div className="h-16 md:h-20" />
-            <About />
-            <Experience />
-            <Education />
-            <Projects />
-            <Contact />
-          </div>
-        </div>
-      )}
-    </>
+      <main id="main-content" className="relative bg-white/80 dark:bg-primary/90 backdrop-blur-sm">
+        <div className="h-16 md:h-20" />
+        <About />
+        <Experience />
+        <Education />
+        <Certifications />
+        <Projects />
+        <Contact />
+      </main>
+    </div>
   );
 };
 

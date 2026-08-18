@@ -114,7 +114,7 @@
   }
 
   .section-subtitle {
-    @apply text-primary-accent3 dark:text-white-60 
+    @apply text-primary-accent3 dark:text-white/60 
            text-lg max-sm:text-base text-center;
   }
 
@@ -266,4 +266,19 @@ body.custom-cursor input,
 body.custom-cursor textarea,
 body.custom-cursor select {
   cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

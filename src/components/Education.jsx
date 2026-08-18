@@ -1,13 +1,6 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { BIET, Educations } from "../constants/Constant";
+import { BIET } from "../constants/assets";
 
 const Education = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <section
       id="education"
@@ -26,12 +19,12 @@ const Education = () => {
 
         {/* Education Card */}
         <div
-          className="EDUCATION flex justify-center"
+          className="EDUCATION grid gap-8 md:grid-cols-2 max-w-6xl mx-auto"
           data-aos="fade-up"
           data-aos-duration="600"
         >
           <article
-            className="group max-w-3xl w-full
+            className="group w-full
             bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/30 dark:to-accent/30 
             rounded-2xl shadow-lg p-8 max-sm:p-5
             transition-all duration-300 ease-smooth
@@ -84,8 +77,7 @@ const Education = () => {
                 <span className="text-2xl mt-1">📅</span>
                 <div>
                   <p className="text-primary-dark/70 dark:text-white/70 text-base max-sm:text-sm">
-                    <span className="font-medium">Duration:</span> November 2022
-                    - May 2026
+                    <span className="font-medium">Duration:</span> 2022 - 2026
                   </p>
                 </div>
               </div>
@@ -102,7 +94,7 @@ const Education = () => {
                     px-4 py-1.5 rounded-lg font-bold text-lg shadow-md
                     transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
-                    7.00 / 10.0
+                    7.28 / 10.0
                   </div>
                 </div>
               </div>
@@ -112,12 +104,39 @@ const Education = () => {
                 <div className="flex flex-wrap gap-3">
                   <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 dark:bg-accent/20 rounded-full text-sm font-medium text-primary-dark dark:text-white">
                     <span className="w-2 h-2 bg-success rounded-full animate-pulse"></span>
-                    Currently Pursuing
+                    Completed in 2026
                   </span>
                   <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full text-sm font-medium text-primary-dark dark:text-white">
-                    🏆 Final Year
+                    B.Tech in Information Technology
                   </span>
                 </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            className="group w-full bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/30 dark:to-accent/30
+            rounded-2xl shadow-lg p-8 max-sm:p-5 transition-all duration-300 ease-smooth
+            hover:shadow-2xl hover:scale-[1.01] border border-transparent hover:border-accent/20 dark:hover:border-accent/30"
+          >
+            <div className="flex h-24 w-24 items-center justify-center rounded-xl bg-white dark:bg-primary/20 ring-2 ring-accent/20 dark:ring-accent/30 text-4xl mb-6">
+              🎓
+            </div>
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-600 dark:from-accent-300 dark:to-white font-bold text-2xl tracking-wide leading-tight mb-2">
+              Jawahar Navodaya Vidyalaya
+            </h2>
+            <p className="text-primary-dark/70 dark:text-white/70 text-base font-medium mb-6">
+              Mainpuri, India
+            </p>
+            <div className="space-y-4 text-primary-dark/70 dark:text-white/70">
+              <div>
+                <h3 className="text-primary-dark dark:text-white font-semibold text-xl">
+                  Higher Secondary Certificate (Class XII)
+                </h3>
+                <p className="mt-1">2020 - 2021</p>
+              </div>
+              <div className="inline-flex items-center rounded-lg bg-gradient-to-r from-success to-success-light px-4 py-1.5 font-bold text-lg text-white shadow-md">
+                85.5%
               </div>
             </div>
           </article>

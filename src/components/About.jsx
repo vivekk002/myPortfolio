@@ -1,13 +1,6 @@
 import Vivek from "../assets/Vivek.png";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
   return (
     <section
       id="about"
@@ -23,7 +16,7 @@ const About = () => {
                 Hi, there! 👋
               </h3>
               <h1 className="text-6xl leading-tight font-bold max-sm:text-5xl max-sm:leading-tight">
-                <span className="text-primary dark:text-white">I'm </span>
+                <span className="text-primary dark:text-white">I&apos;m </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-600 dark:from-accent-300 dark:to-white animate-gradient">
                   Vivek Kumar
                 </span>
@@ -37,20 +30,16 @@ const About = () => {
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-orange"></span>
               </span>
               <p className="text-primary dark:text-white font-semibold text-base">
-                Full-Stack Developer
+                Backend Developer | Full-Stack Builder
               </p>
             </div>
 
             {/* Bio */}
             <p className="text-xl leading-relaxed text-primary/80 dark:text-white/80 max-w-2xl max-sm:text-lg">
-              Passionate about building{" "}
-              <span className="font-semibold text-orange">scalable</span> and{" "}
-              <span className="font-semibold text-accent-600 dark:text-accent-400">
-                user-centric
-              </span>{" "}
-              web applications using the <strong>MERN stack</strong>.
-              Experienced in React, Node.js, MongoDB, and Tailwind CSS, with a
-              focus on clean code and modern design.
+              I build <span className="font-semibold text-orange">reliable backend systems</span>{" "}
+              and full-stack products with <strong>Node.js, TypeScript, Express.js, PostgreSQL,</strong>{" "}
+              and <strong>MongoDB</strong>. My focus is secure APIs, authentication,
+              database design, validation, testing, and thoughtful developer experience.
             </p>
 
             {/* CTA Buttons */}
@@ -99,21 +88,21 @@ const About = () => {
               data-aos-delay="400"
             >
               <div className="text-center">
-                <p className="text-3xl font-bold text-orange">10+</p>
+                <p className="text-3xl font-bold text-orange">20</p>
                 <p className="text-sm text-primary/60 dark:text-white/60">
-                  Projects
+                  REST APIs Built
                 </p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-accent-600 dark:text-accent-400">
-                  15+
+                  10
                 </p>
                 <p className="text-sm text-primary/60 dark:text-white/60">
-                  Technologies
+                  Prisma Models
                 </p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-success">7.0</p>
+                <p className="text-3xl font-bold text-success">7.28</p>
                 <p className="text-sm text-primary/60 dark:text-white/60">
                   CGPA
                 </p>
@@ -134,7 +123,7 @@ const About = () => {
               {/* Main image */}
               <img
                 src={Vivek}
-                alt="Vivek Kumar - Full Stack Developer"
+                alt="Vivek Kumar - Backend Developer"
                 className="relative z-10 rounded-3xl w-full h-full object-cover shadow-2xl
                   ring-4 ring-accent/30 dark:ring-accent/50
                   transition-all duration-500 ease-smooth

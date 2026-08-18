@@ -1,8 +1,17 @@
-/* eslint-disable react/prop-types */
 import { SiGithub } from "react-icons/si";
 import { SlLink } from "react-icons/sl";
+import PropTypes from "prop-types";
 
-const Project_prop = (props) => {
+const ProjectProp = ({
+  title,
+  para,
+  img,
+  github_link: githubLink,
+  link,
+  date,
+  status,
+  ...tech
+}) => {
   return (
     <article
       className="group shadow-lg rounded-2xl bg-gradient-to-br from-primary/10 to-primary-accent/10 dark:from-primary/30 dark:to-primary-accent/30 
@@ -19,8 +28,8 @@ const Project_prop = (props) => {
         <div className="flex-shrink-0">
           <div className="w-24 h-24 max-sm:w-20 max-sm:h-20 rounded-xl overflow-hidden bg-primary/5 dark:bg-primary-accent/5 ring-2 ring-primary/10 dark:ring-primary-accent/10 transition-all duration-300 group-hover:ring-primary/30 dark:group-hover:ring-primary-accent/30 group-hover:scale-105">
             <img
-              src={props.img}
-              alt={`${props.title} logo`}
+              src={img}
+              alt={`${title} logo`}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
             />
@@ -30,7 +39,7 @@ const Project_prop = (props) => {
         {/* Title and Tech Stack */}
         <div className="flex-1 min-w-0">
           <h2 className="font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-accent dark:from-primary-accent dark:to-white text-2xl max-sm:text-xl mb-3 leading-tight">
-            {props.title}
+            {title}
           </h2>
 
           <div className="space-y-2">
@@ -41,21 +50,24 @@ const Project_prop = (props) => {
             {/* Tech Stack Grid with better spacing */}
             <div className="flex flex-wrap gap-2 max-sm:gap-1.5">
               {[
-                props.html5,
-                props.css3,
-                props.javascript,
-                props.tailwindcss,
-                props.react,
-                props.vite,
-                props.nodejs,
-                props.mongodb,
-                props.expressjs,
-                props.redux,
-                props.cloudinary,
-                props.nextjs,
-                props.postgresql,
-                props.prisma,
-                props.socketio,
+                tech.html5,
+                tech.css3,
+                tech.javascript,
+                tech.tailwindcss,
+                tech.react,
+                tech.vite,
+                tech.nodejs,
+                tech.mongodb,
+                tech.expressjs,
+                tech.redux,
+                tech.cloudinary,
+                tech.nextjs,
+                tech.postgresql,
+                tech.prisma,
+                tech.socketio,
+                tech.stripe,
+                tech.swagger,
+                tech.google,
               ]
                 .filter(Boolean)
                 .map((tech, index) => (
@@ -73,15 +85,15 @@ const Project_prop = (props) => {
 
       {/* Description */}
       <p className="text-primary-dark/70 dark:text-white/70 text-base max-sm:text-sm leading-relaxed px-1">
-        {props.para}
+        {para}
       </p>
 
       {/* Footer with Links */}
       <div className="flex items-center justify-between pt-3 mt-auto border-t border-primary/10 dark:border-primary-accent/20">
         <div className="flex gap-4 text-primary-dark dark:text-white">
-          {props.github_link && (
+          {githubLink && (
             <a
-              href={props.github_link}
+              href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
               className="group/icon p-2 rounded-lg bg-primary/5 dark:bg-primary-accent/5 hover:bg-primary/10 dark:hover:bg-primary-accent/10 transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-accent"
@@ -90,9 +102,9 @@ const Project_prop = (props) => {
               <SiGithub className="text-2xl transition-transform group-hover/icon:rotate-12" />
             </a>
           )}
-          {props.link && (
+          {link && (
             <a
-              href={props.link}
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="group/icon p-2 rounded-lg bg-primary/5 dark:bg-primary-accent/5 hover:bg-primary/10 dark:hover:bg-primary-accent/10 transition-all duration-300 hover:scale-110 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-accent"
@@ -103,23 +115,57 @@ const Project_prop = (props) => {
           )}
         </div>
 
-        {/* Optional status badge */}
-        {props.status && (
-          <span
-            className={`text-xs font-medium px-3 py-1 rounded-full ${
-              props.status === "Live"
-                ? "bg-green-500/10 text-green-600 dark:text-green-400 ring-1 ring-green-500/20"
-                : props.status === "In Progress"
-                  ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 ring-1 ring-yellow-500/20"
-                  : "bg-primary/10 text-primary-dark dark:text-white ring-1 ring-primary/20"
-            }`}
-          >
-            {props.status}
-          </span>
-        )}
+        <div className="flex items-center gap-2">
+          {date && <time className="text-xs text-primary-dark/60 dark:text-white/60">{date}</time>}
+          {status && (
+            <span
+              className={`text-xs font-medium px-3 py-1 rounded-full ${
+                status === "Live"
+                  ? "bg-green-500/10 text-green-600 dark:text-green-400 ring-1 ring-green-500/20"
+                  : status === "In Progress"
+                    ? "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 ring-1 ring-yellow-500/20"
+                    : "bg-primary/10 text-primary-dark dark:text-white ring-1 ring-primary/20"
+              }`}
+            >
+              {status}
+            </span>
+          )}
+        </div>
       </div>
     </article>
   );
 };
 
-export default Project_prop;
+const techPropTypes = {
+  html5: PropTypes.node,
+  css3: PropTypes.node,
+  javascript: PropTypes.node,
+  tailwindcss: PropTypes.node,
+  react: PropTypes.node,
+  vite: PropTypes.node,
+  nodejs: PropTypes.node,
+  mongodb: PropTypes.node,
+  expressjs: PropTypes.node,
+  redux: PropTypes.node,
+  cloudinary: PropTypes.node,
+  nextjs: PropTypes.node,
+  postgresql: PropTypes.node,
+  prisma: PropTypes.node,
+  socketio: PropTypes.node,
+  stripe: PropTypes.node,
+  swagger: PropTypes.node,
+  google: PropTypes.node,
+};
+
+ProjectProp.propTypes = {
+  title: PropTypes.string.isRequired,
+  para: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  github_link: PropTypes.string,
+  link: PropTypes.string,
+  date: PropTypes.string,
+  status: PropTypes.oneOf(["Live", "In Progress", "Completed"]),
+  ...techPropTypes,
+};
+
+export default ProjectProp;

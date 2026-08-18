@@ -2,17 +2,9 @@
 
 import Exp_prop from "./Exp_prop";
 import Skills from "./Skills";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-
-import { NomadNx, Projects } from "../constants/Constant";
+import { NomadNx, Projects } from "../constants/assets";
 
 const Experience = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <>
       <section
@@ -37,18 +29,26 @@ const Experience = () => {
           >
             <Exp_prop
               img={NomadNx}
-              title="Software Development Intern"
-              subtitle="NomadNX Services"
+              title="Software Developer Intern"
+              subtitle="NomadNx | BIICF, BIET Jhansi"
               date="Nov 2024 - Apr 2025"
-              para="Designed and developed responsive front-end interfaces for ERP systems and client websites using React and modern CSS frameworks. Collaborated with cross-functional teams to deliver features aligned with business objectives, contributing to improved user experience and system efficiency."
+              highlights={[
+                "Engineered responsive React and Tailwind interfaces for 3+ client projects.",
+                "Integrated REST APIs with Axios, including request, response, and error-state handling.",
+                "Created Postman workflows for authentication and edge cases, reducing production bugs by 15%.",
+              ]}
               badge="Internship"
             />
             <Exp_prop
               img={Projects}
-              title="Full-Stack Web Developer"
-              subtitle="Freelance / Personal Projects"
-              date="Aug 2024 - Present"
-              para="Built and deployed multiple full-stack applications using the MERN stack with TypeScript. Implemented features including JWT authentication, RESTful APIs, real-time updates, vector embeddings for AI search, and cloud image management. Focused on scalable architecture and responsive UI design."
+              title="Backend Developer"
+              subtitle="Ziksir | Project: Nile"
+              date="Jun 2026 - Present"
+              highlights={[
+                "Implemented NextAuth/JWT authentication, bcrypt, RBAC, email verification, password reset, and Redis-backed rate limiting.",
+                "Designed a Prisma/PostgreSQL schema across 10 models and built 20 Zod-validated REST APIs for booking, user, and admin workflows.",
+                "Built order processing and admin management, backed by Jest tests and automated Vercel deployment.",
+              ]}
               badge="Active"
             />
           </div>

@@ -1,4 +1,6 @@
-const Img_prop = ({ img, label }) => {
+import PropTypes from "prop-types";
+
+const ImgProp = ({ img, label }) => {
   return (
     <div
       className="group/skill relative w-[110px] h-[110px] max-sm:w-[85px] max-sm:h-[85px]
@@ -40,4 +42,9 @@ const Img_prop = ({ img, label }) => {
   );
 };
 
-export default Img_prop;
+ImgProp.propTypes = {
+  img: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+};
+
+export default ImgProp;

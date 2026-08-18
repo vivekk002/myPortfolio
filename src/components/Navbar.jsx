@@ -1,20 +1,24 @@
 import { CgMenuRightAlt } from "react-icons/cg";
 import { HiSun, HiMoon } from "react-icons/hi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Menu from "./Menu";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  });
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
+  const menuButtonRef = useRef(null);
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   useEffect(() => {
@@ -53,11 +57,17 @@ const Navbar = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const closeMenu = () => {
+    setNav(false);
+    requestAnimationFrame(() => menuButtonRef.current?.focus());
+  };
+
   const isActive = (section) => activeSection === section;
 
   return (
     <>
       <nav
+        aria-label="Primary navigation"
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-smooth
         ${
           scrolled
@@ -73,6 +83,7 @@ const Navbar = () => {
           {/* Logo - smaller on mobile */}
           <a
             href="#about"
+            aria-label="Vivek Kumar home"
             className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white via-accent-300 to-accent-500 bg-clip-text text-transparent
               transition-all duration-300 hover:scale-105 hover:from-accent-300 hover:to-white"
           >
@@ -91,6 +102,7 @@ const Navbar = () => {
               <a
                 key={href}
                 href={href}
+                aria-current={isActive(href.slice(1)) ? "page" : undefined}
                 className={`relative text-white font-medium transition-all duration-300
                   hover:text-accent-300 group
                   ${isActive(href.slice(1)) ? "text-accent-300" : ""}`}
@@ -111,7 +123,7 @@ const Navbar = () => {
               onClick={handleTheme}
               className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white hover:text-accent-300 
                 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent/50"
-              aria-label="Toggle theme"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             >
               {theme === "dark" ? (
                 <HiMoon className="text-2xl" />
@@ -123,10 +135,13 @@ const Navbar = () => {
 
           {/* Mobile Menu Button - compact */}
           <button
-            onClick={() => setNav(!nav)}
+            ref={menuButtonRef}
+            onClick={() => setNav(true)}
             className="md:hidden p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white 
               transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent/50"
             aria-label="Open menu"
+            aria-expanded={nav}
+            aria-controls="mobile-menu"
           >
             <CgMenuRightAlt className="text-2xl" />
           </button>
@@ -135,7 +150,7 @@ const Navbar = () => {
 
       {nav && (
         <Menu
-          setNav={setNav}
+          onClose={closeMenu}
           activeSection={activeSection}
           theme={theme}
           setTheme={setTheme}

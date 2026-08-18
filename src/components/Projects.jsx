@@ -1,21 +1,15 @@
 import Project_prop from "./Project_prop";
 import {
-  GPT4,
   Portfolio,
   Employee,
   Airbnb,
-  Game,
-  Ecommerce,
   SecondBrain,
   LodgeLogic,
   DevCollab,
   SwiftCart,
-} from "../constants/Constant";
+} from "../constants/assets";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import {
   SiReact,
   SiTailwindcss,
@@ -32,14 +26,13 @@ import {
   SiPostgresql,
   SiPrisma,
   SiSocketdotio,
+  SiStripe,
+  SiSwagger,
+  SiGoogle,
 } from "react-icons/si";
 import { FaCloud } from "react-icons/fa";
 
 const Projects = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <section
       id="projects"
@@ -106,11 +99,12 @@ const Projects = () => {
           />
           <Project_prop
             title="LodgeLogic"
-            para="A full-stack hotel booking platform revolutionizing discovery and management. Features smart search, real-time availability, secure payments, and comprehensive dashboards."
+            para="Type-safe hotel booking and management platform with 27 REST endpoints, JWT/RBAC security, Stripe payments, Cloudinary media, Swagger documentation, and an owner analytics dashboard."
             img={LodgeLogic}
-            link=""
+            link="https://l-l-hm.vercel.app/"
             github_link="https://github.com/vivekk002/L-L-hm.git"
-            status="Completed"
+            date="Oct 2025 - Jan 2026"
+            status="Live"
             react={
               <Tooltip title="React" arrow>
                 <IconButton>
@@ -160,13 +154,28 @@ const Projects = () => {
                 </IconButton>
               </Tooltip>
             }
+            stripe={
+              <Tooltip title="Stripe" arrow>
+                <IconButton>
+                  <SiStripe className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            swagger={
+              <Tooltip title="Swagger" arrow>
+                <IconButton>
+                  <SiSwagger className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
           />
           <Project_prop
             title="MindVault"
-            para="AI-powered MERN stack content organizer with vector embeddings for intelligent search and retrieval. Features tag-based organization, real-time updates, and semantic search using OpenAI embeddings stored in MongoDB."
+            para="AI-powered knowledge platform with Gemini-powered Q&A, vector search across documents and YouTube videos, transcript extraction, and MongoDB query optimization for sub-second retrieval."
             img={SecondBrain}
             link="https://secontbrainfe.onrender.com/"
             github_link="https://github.com/vivekk002/secontBrainfe.git"
+            date="Jun 2025 - Sep 2025"
             status="Live"
             react={
               <Tooltip title="React" arrow>
@@ -221,6 +230,13 @@ const Projects = () => {
               <Tooltip title="Redux" arrow>
                 <IconButton>
                   <SiRedux className="dark:text-white text-primary-dark" />
+                </IconButton>
+              </Tooltip>
+            }
+            google={
+              <Tooltip title="Google Gemini API" arrow>
+                <IconButton>
+                  <SiGoogle className="dark:text-white text-primary-dark" />
                 </IconButton>
               </Tooltip>
             }
